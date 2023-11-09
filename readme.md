@@ -1,1 +1,5 @@
-# read me bla bla 
+# Spillprojekt 
+
+Todo:
+- Skisse
+- Klaser
