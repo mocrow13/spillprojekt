@@ -8,7 +8,7 @@ cellenumber = 16
 
 class slange:
     def __init__(self):
-        self.body = [Vector2(4,10),Vector2(3,10),Vector2(2,10)] #alle de blokkene som slangen skal oppholde seg i starten
+        self.body = [Vector2(4,10),Vector2(3,10),Vector2(2,10)] #i virkeligheten er det (2,10), (3,10), (4,10)    #alle de blokkene som slangen skal oppholde seg i starten
         self.direction = Vector2(1,0) # bevegelsen til hode
         
         self.new_blokk = False 
@@ -47,7 +47,8 @@ class slange:
             elif index == len(self.body) -1:
                 vindu.blit(self.tail, blokk_rect)
             else: 
-                previous_blokk = self.body[index + 1] - blokk  #self.body[index + 1] er den neste blokken i slangebodyen, ved å trekke blokk fra self.body[index + 1], finner vi avstanden fra den blokken til den neste blokken   
+                previous_blokk = self.body[index + 1] - blokk  #  self.body = [2, 4, 6, 8, 10]  previous_blokk = self.body[2 + 1] - 6 = 8 - 6 = 2
+# self.body[index + 1] er den neste blokken i slangebodyen, ved å trekke blokk fra self.body[index + 1], finner vi avstanden fra den blokken til den neste blokken   
                 next_blokk  = self.body[index - 1] -blokk  #self.body[index + 1] er den forrge blokken i slangebodyen, ved å trekke blokk fra self.body[index + -], finner vi avstanden fra den blokken til den neste blokken 
                 if previous_blokk.x == next_blokk.x:   # hvis x kordinatene er like, ligger slangebodyen vertikalt 
                     vindu.blit(self.body_vertical,blokk_rect ) 
