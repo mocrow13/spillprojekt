@@ -3,6 +3,7 @@ from sys import exit
 from random import randint
 from pygame.math import Vector2
 
+
 cellestørrelse = 40 
 cellenumber = 16 
 
